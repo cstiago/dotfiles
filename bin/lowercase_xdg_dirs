@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+xdg-user-dirs-update;
+
+echo 'XDG_DESKTOP_DIR="$HOME/desktop"
+XDG_DOWNLOAD_DIR="$HOME/downloads"
+XDG_TEMPLATES_DIR="$HOME/templates"
+XDG_PUBLICSHARE_DIR="$HOME/public"
+XDG_DOCUMENTS_DIR="$HOME/documents"
+XDG_MUSIC_DIR="$HOME/music"
+XDG_PICTURES_DIR="$HOME/pictures"
+XDG_VIDEOS_DIR="$HOME/videos"' > ~/.config/user-dirs.dirs;
+
+mv $HOME/Desktop $HOME/desktop;
+mv $HOME/Downloads $HOME/downloads;
+mv $HOME/Templates $HOME/templates;
+mv $HOME/Public $HOME/public;
+mv $HOME/Documents $HOME/documents;
+mv $HOME/Music $HOME/music;
+mv $HOME/Pictures $HOME/pictures;
+mv $HOME/Videos $HOME/videos;
