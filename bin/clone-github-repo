@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+read -p "user: " user
+read -p "repo: " repo
+
+git clone https://github.com/${user}/${repo}.git

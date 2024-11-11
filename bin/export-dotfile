@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# export dotfile from home dir to cstiago/dotfiles repo, replacing it
+
+read -p "dotfile: " dotfile
+
+cp ~/${dotfile} ~/dotfiles/

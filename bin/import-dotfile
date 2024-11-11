@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# import dotfile from cstiago/dotfiles repo to home dir, replacing it
+
+read -p "dotfile: " dotfile
+
+cp ~/dotfiles/${dotfile} ~/
