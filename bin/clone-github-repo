@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-read -p "user: " user
-read -p "repo: " repo
+user=$1
+repo=$2
 
-git clone https://github.com/${user}/${repo}.git
+if [[ -z $user ]]; then
+    read -p "user: " user
+fi
+
+if [[ -z $repo ]]; then
+    read -p "repo: " repo
+fi
+
+git clone git@github.com:$user/$repo.git

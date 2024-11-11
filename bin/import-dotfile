@@ -2,6 +2,10 @@
 
 # import dotfile from cstiago/dotfiles repo to home dir, replacing it
 
-read -p "dotfile: " dotfile
+dotfile=$1
 
-cp ~/dotfiles/${dotfile} ~/
+if [[ -z $dotfile ]]; then
+    read -p "dotfile: " dotfile
+fi
+
+cp ~/dotfiles/$dotfile ~/

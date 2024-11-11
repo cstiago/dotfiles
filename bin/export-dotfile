@@ -2,6 +2,10 @@
 
 # export dotfile from home dir to cstiago/dotfiles repo, replacing it
 
-read -p "dotfile: " dotfile
+dotfile=$1
 
-cp ~/${dotfile} ~/dotfiles/
+if [[ -z $dotfile ]]; then
+    read -p "dotfile: " dotfile
+fi
+
+cp ~/$dotfile ~/dotfiles/
