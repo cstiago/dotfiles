@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# wsl
+
+cmd.exe /c start wsl.exe -d $WSL_DISTRO_NAME --user $LOGNAME -- nvim $DFPROC/@
