@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-ln -fs $HOME/dotfiles/bin/ $HOME/
-ln -fs $HOME/dotfiles/procedure/ $HOME/
+ln -fs $DFBIN/ $HOME/
+ln -fs $DFPROC/ $HOME/
