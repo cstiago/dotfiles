@@ -2,10 +2,13 @@
 
 # import dotfile from cstiago/dotfiles repo to home dir, replacing it
 
-dotfile=$1
+dotfiles=($@)
 
-if [[ -z $dotfile ]]; then
+if [[ $# -eq 0 ]]; then
     read -p "dotfile: " dotfile
+    dotfiles=($dotfile)
 fi
 
-cp $HOME/dotfiles/$dotfile $HOME/
+for dotfile in $dotfiles; do
+    cp $DF/$dotfile $HOME/
+done

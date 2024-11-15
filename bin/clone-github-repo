@@ -4,17 +4,17 @@ case $# in
     0)
         read -p "user: " user
         read -p "repo: " repo
-	;;
+        ;;
     1)
         both=$1
-	;;
+        ;;
     2)
         user=$1
-	repo=$2
-	;;
+        repo=$2
+        ;;
     *)
-	exit
-	;;
+        exit
+        ;;
 esac
 
 if [[ -n $user && -n $repo ]]; then
