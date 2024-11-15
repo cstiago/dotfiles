@@ -8,4 +8,4 @@ if [[ -z $dotfile ]]; then
     read -p "dotfile: " dotfile
 fi
 
-cp ~/dotfiles/$dotfile ~/
+cp $HOME/dotfiles/$dotfile $HOME/

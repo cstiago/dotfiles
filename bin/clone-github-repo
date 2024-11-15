@@ -1,14 +1,28 @@
 #!/usr/bin/env bash
 
-user=$1
-repo=$2
+case $# in
+    0)
+        read -p "user: " user
+        read -p "repo: " repo
+	;;
+    1)
+        both=$1
+	;;
+    2)
+        user=$1
+	repo=$2
+	;;
+    *)
+	exit
+	;;
+esac
 
-if [[ -z $user ]]; then
-    read -p "user: " user
+if [[ -n $user && -n $repo ]]; then
+    git=$user/$repo.git
 fi
 
-if [[ -z $repo ]]; then
-    read -p "repo: " repo
+if [[ -n $both ]]; then
+    git=$both.git
 fi
 
-git clone git@github.com:$user/$repo.git
+git clone git@github.com:$git

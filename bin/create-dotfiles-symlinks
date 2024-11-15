@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-ln -fs ~/dotfiles/bin/ ~/
-ln -fs ~/dotfiles/procedures/ ~/
+ln -fs $HOME/dotfiles/bin/ $HOME/
+ln -fs $HOME/dotfiles/procedure/ $HOME/
