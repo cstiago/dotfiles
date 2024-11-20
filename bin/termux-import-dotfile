@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# import dotfile from cstiago/dotfiles repo to home dir, replacing it
+
+dotfiles=($@)
+
+if [[ $# -eq 0 ]]; then
+    read -p "dotfile: " dotfile
+    dotfiles=($dotfile)
+fi
+
+for dotfile in $dotfiles; do
+    cp $DFTERMUX/$dotfile $HOME/
+done
