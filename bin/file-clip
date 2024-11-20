@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+file=$1
+
+# wsl
+# https://stackoverflow.com/a/62517779
+cat $file | clip.exe
