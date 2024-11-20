@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+program=$1
+executable=${program::-4}
+
+g++ $program -o $executable
