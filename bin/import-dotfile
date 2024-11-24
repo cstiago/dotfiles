@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # import dotfile from cstiago/dotfiles repo to home dir, replacing it
 

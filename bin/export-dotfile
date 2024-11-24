@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # export dotfile from home dir to cstiago/dotfiles repo, replacing it
 

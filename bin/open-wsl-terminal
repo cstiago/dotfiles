@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# wsl
+cmd.exe /c start wsl.exe -d $WSL_DISTRO_NAME --user $LOGNAME --cd $HOME
