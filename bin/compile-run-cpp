@@ -1,6 +1,5 @@
 #!/bin/bash
 
-program=$1
-executable=${program::-4}
+executable=${1::-4}
 
-compile-cpp $program && ./$executable
+make $executable && ./$executable
