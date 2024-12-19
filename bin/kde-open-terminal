@@ -1,3 +1,0 @@
-#!/bin/bash
-
-konsole --workdir "$@" > /dev/null 2> /dev/null &
