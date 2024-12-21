@@ -125,8 +125,8 @@ TEXMAN=/usr/local/texlive/2024/texmf-dist/doc/man
 TEXINFO=/usr/local/texlive/2024/texmf-dist/doc/info
 
 [[ :$PATH: != *:$TEXBIN:* ]] && export PATH=$PATH:$TEXBIN
-[[ :$PATH: != *:$TEXMAN:* ]] && export PATH=$PATH:$TEXMAN
-[[ :$PATH: != *:$TEXINFO:* ]] && export PATH=$PATH:$TEXINFO
+[[ :$MANPATH: != *:$TEXMAN:* ]] && export MANPATH=$MANPATH:$TEXMAN
+[[ :$INFOPATH: != *:$TEXINFO:* ]] && export INFOPATH=$INFOPATH:$TEXINFO
 
 # cstiago/dotfiles
 export DF=$HOME/dotfiles
