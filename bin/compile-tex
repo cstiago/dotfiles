@@ -1,0 +1,3 @@
+#!/bin/bash
+
+lualatex --output-dir=output main.tex
