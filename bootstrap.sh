@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xargs sudo apt -y install < packages/apt
+sed 's/#.*//' packages/apt | xargs sudo apt -y install

@@ -1,9 +1,9 @@
 zsh
 vim
-neovim
+neovim # execute as nvim
 git
-build-essential
-gdb
+build-essential # building tools (gcc, make etc.)
+gdb # gnu debugger
 python3
 python3-cliapp
 python3-ttystatus
@@ -12,3 +12,4 @@ tmux
 vlc
 time
 info
+
