@@ -1,4 +1,0 @@
-#!/bin/bash
-
-ln -fs $DFBIN/ $HOME/
-ln -fs $DFPROC/ $HOME/
