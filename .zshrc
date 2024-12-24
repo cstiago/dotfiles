@@ -120,7 +120,7 @@ source $HOME/.utils
 export DF=$HOME/dotfiles
 export BIN=$DF/bin
 
-append_to_path PATH $BIN
+append_to_env PATH $BIN
 
 # cstiago/proc
 export PROC=$HOME/proc
@@ -135,9 +135,9 @@ TEXBIN=/usr/local/texlive/2024/bin/x86_64-linux
 TEXMAN=/usr/local/texlive/2024/texmf-dist/doc/man
 TEXINFO=/usr/local/texlive/2024/texmf-dist/doc/info
 
-append_to_path PATH $TEXBIN
-append_to_path MANPATH $TEXMAN
-append_to_path INFOPATH $TEXINFO
+append_to_env PATH $TEXBIN
+append_to_env MANPATH $TEXMAN
+append_to_env INFOPATH $TEXINFO
 
 return 0
 
