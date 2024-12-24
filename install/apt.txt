@@ -1,4 +1,5 @@
 zsh
+curl
 vim
 neovim # execute as nvim
 git
@@ -12,4 +13,3 @@ tmux
 vlc
 time
 info
-

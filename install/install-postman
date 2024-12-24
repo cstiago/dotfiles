@@ -1,0 +1,3 @@
+#!/bin/bash
+
+deb postman https://dl.pstmn.io/download/latest/linux_64
