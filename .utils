@@ -1,20 +1,20 @@
 # PATH, MANPATH, INFOPATH
-append_to_path() {
+append_to_env() {
     if [[ $# -lt 2 ]]; then
-        echo "Usage: append_to_path <path> <dir>"
-        echo "e.g. append_to_path PATH /path/to/dir" 
+        echo "Usage: append_to_env <env> <dir>"
+        echo "e.g. append_to_env PATH /path/to/dir" 
         return 1
     fi
 
-    local path=$1
+    local env=$1
     local dir=$2
 
-    if [[ :${(P)path}: != *:$dir:* ]]; then
+    if [[ :${(P)env}: != *:$dir:* ]]; then
     
-        if [[ -n ${(P)path} ]]; then
-            export $path=${(P)path}:$dir
+        if [[ -n ${(P)env} ]]; then
+            export $env=${(P)env}:$dir
         else
-            export $path=$dir
+            export $env=$dir
         fi
     fi
 }
