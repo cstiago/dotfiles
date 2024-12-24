@@ -1,0 +1,21 @@
+# PATH, MANPATH, INFOPATH
+append_to_path() {
+    if [[ $# -lt 2 ]]; then
+        echo "Usage: append_to_path <path> <dir>"
+        echo "e.g. append_to_path PATH /path/to/dir" 
+        return 1
+    fi
+
+    local path=$1
+    local dir=$2
+
+    if [[ :${(P)path}: != *:$dir:* ]]; then
+    
+        if [[ -n ${(P)path} ]]; then
+            export $path=${(P)path}:$dir
+        else
+            export $path=$dir
+        fi
+    fi
+}
+
