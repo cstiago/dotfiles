@@ -3,18 +3,19 @@ append_to_env() {
     if [[ $# -lt 2 ]]; then
         echo "Usage: append_to_env <env> <dir>"
         echo "e.g. append_to_env PATH /path/to/dir" 
+
         return 1
     fi
 
-    local env=$1
-    local dir=$2
+    local ENV=$1
+    local DIR=$2
 
-    if [[ :${(P)env}: != *:$dir:* ]]; then
+    if [[ :${(P)ENV}: != *:$DIR:* ]]; then
     
-        if [[ -n ${(P)env} ]]; then
-            export $env=${(P)env}:$dir
+        if [[ -n ${(P)ENV} ]]; then
+            export $ENV=${(P)ENV}:$DIR
         else
-            export $env=$dir
+            export $ENV=$DIR
         fi
     fi
 }

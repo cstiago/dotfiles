@@ -1,3 +1,9 @@
 #!/bin/bash
 
-sed 's/#.*//' packages/apt | xargs sudo apt -y install
+sed 's/#.*//' install/apt.txt | xargs sudo apt -y install
+
+install-discord
+install-vscode
+install-insomnia
+install-postman
+install-compass

@@ -121,6 +121,7 @@ export DF=$HOME/dotfiles
 export BIN=$DF/bin
 
 append_to_env PATH $BIN
+append_to_env PATH $DF/install
 
 # cstiago/proc
 export PROC=$HOME/proc

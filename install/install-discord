@@ -1,7 +1,4 @@
 #!/bin/bash
 
-DEB="https://discord.com/api/download?platform=linux&format=deb"
+deb discord https://discord.com/api/download?platform=linux&format=deb
 
-curl -L -o /tmp/discord.deb $DEB
-
-sudo apt install /tmp/discord.deb

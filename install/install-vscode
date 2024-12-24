@@ -1,0 +1,3 @@
+#!/bin/bash
+
+deb vscode https://code.visualstudio.com/docs/?dv=linux64_deb
