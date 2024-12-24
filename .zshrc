@@ -114,6 +114,17 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+source $HOME/.utils
+
+# cstiago/dotfiles
+export DF=$HOME/dotfiles
+export BIN=$DF/bin
+
+append_to_path PATH $BIN
+
+# cstiago/proc
+export PROC=$HOME/proc
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -124,15 +135,9 @@ TEXBIN=/usr/local/texlive/2024/bin/x86_64-linux
 TEXMAN=/usr/local/texlive/2024/texmf-dist/doc/man
 TEXINFO=/usr/local/texlive/2024/texmf-dist/doc/info
 
-[[ :$PATH: != *:$TEXBIN:* ]] && export PATH=$PATH:$TEXBIN
-[[ :$MANPATH: != *:$TEXMAN:* ]] && export MANPATH=$MANPATH:$TEXMAN
-[[ :$INFOPATH: != *:$TEXINFO:* ]] && export INFOPATH=$INFOPATH:$TEXINFO
-
-# cstiago/dotfiles
-export DF=$HOME/dotfiles
-export DFBIN=$DF/bin
-export DFPROC=$DF/proc
-
-[[ :$PATH: != *:$DFBIN:* ]] && export PATH=$PATH:$DFBIN
+append_to_path PATH $TEXBIN
+append_to_path MANPATH $TEXMAN
+append_to_path INFOPATH $TEXINFO
 
 return 0
+
