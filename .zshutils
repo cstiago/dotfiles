@@ -1,17 +1,19 @@
 # PATH, MANPATH, INFOPATH
 append_to_env() {
     if [[ $# -lt 2 ]]; then
-        echo "Usage: append_to_env <env> <dir>"
-        echo "e.g. append_to_env PATH /path/to/dir" 
+        FUNC=${funcstack[1]}
+
+        echo "Usage: $FUNC <env> <dir>"
+        echo "e.g. $FUNC PATH /path/to/dir"
 
         return 1
     fi
 
-    local ENV=$1
-    local DIR=$2
+    ENV=$1
+    DIR=$2
 
     if [[ :${(P)ENV}: != *:$DIR:* ]]; then
-    
+
         if [[ -n ${(P)ENV} ]]; then
             export $ENV=${(P)ENV}:$DIR
         else
@@ -19,4 +21,3 @@ append_to_env() {
         fi
     fi
 }
-

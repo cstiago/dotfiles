@@ -114,17 +114,17 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source $HOME/.utils
+source $HOME/.zshutils
 
 # cstiago/dotfiles
-export DF=$HOME/dotfiles
-export BIN=$DF/bin
+export DFDIR=$HOME/dotfiles
+export BINDIR=$DFDIR/bin
 
-append_to_env PATH $BIN
-append_to_env PATH $DF/install
+append_to_env PATH $BINDIR
+append_to_env PATH $DFDIR/install
 
 # cstiago/proc
-export PROC=$HOME/proc
+export PROCDIR=$HOME/proc
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -141,4 +141,3 @@ append_to_env MANPATH $TEXMAN
 append_to_env INFOPATH $TEXINFO
 
 return 0
-
