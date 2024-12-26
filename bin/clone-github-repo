@@ -6,23 +6,23 @@ case $# in
         read -p "repo: " repo
         ;;
     1)
-        both=$1
+        BOTH=$1
         ;;
     2)
-        user=$1
-        repo=$2
+        USER=$1
+        REPO=$2
         ;;
     *)
         exit
         ;;
 esac
 
-if [[ -n $user && -n $repo ]]; then
-    git=$user/$repo.git
+if [[ -n $USER && -n $REPO ]]; then
+    GIT=$USER/$REPO.git
 fi
 
-if [[ -n $both ]]; then
-    git=$both.git
+if [[ -n $BOTH ]]; then
+    GIT=$BOTH.git
 fi
 
-git clone git@github.com:$git
+git clone git@github.com:$GIT

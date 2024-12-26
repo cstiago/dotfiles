@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ln -fs $BIN/ $HOME/
-ln -fs $DF/install $HOME/
+ln -fs $BINDIR/ $HOME/
+ln -fs $DFDIR/install $HOME/

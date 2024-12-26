@@ -1,5 +1,5 @@
 #!/bin/bash
 
-executable=${1::-4}
+EXEC=${1::-4}
 
-make $executable && ./$executable
+make $EXEC && ./$EXEC
