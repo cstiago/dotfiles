@@ -114,9 +114,12 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source $HOME/.zshutils
+# Populate $MANPATH
+export MANPATH=$(manpath -q)
 
 # cstiago/dotfiles
+source $HOME/.zshutils
+
 export DFDIR=$HOME/dotfiles
 export BINDIR=$DFDIR/bin
 
