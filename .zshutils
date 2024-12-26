@@ -13,7 +13,6 @@ append_to_env() {
     DIR=$2
 
     if [[ :${(P)ENV}: != *:$DIR:* ]]; then
-
         if [[ -n ${(P)ENV} ]]; then
             export $ENV=${(P)ENV}:$DIR
         else
