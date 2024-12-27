@@ -1,0 +1,21 @@
+#!/bin/bash
+
+REPO=deb
+REPOTXT=$DFDIR/install/$REPO.txt
+REPODIR=/usr/local/$REPO
+REPOLIST=/etc/apt/sources.list.d/$REPO.list
+
+if [[ ! -f $REPOLIST ]]; then
+    echo "deb [trusted=yes] file:$REPODIR ./" | sudo tee $REPOLIST
+fi
+
+sudo mkdir -p $REPODIR
+cd $REPODIR
+sudo ln -fs $REPOTXT .
+sudo rm ./*.deb
+
+sudo awk '{print $1, $2}' $REPOTXT | xargs -n 2 bash -c 'sudo curl -L -o "$1/$2.deb" "$3"' bash $REPODIR
+
+sudo dpkg-scanpackages . /dev/null | sudo gzip -9c | sudo tee $REPODIR/Packages.gz > /dev/null
+
+sudo apt update
