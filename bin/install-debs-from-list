@@ -1,0 +1,3 @@
+#!/bin/bash
+
+update-deb-list && sudo apt install $DEBREPODIR/*.deb
