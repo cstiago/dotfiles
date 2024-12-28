@@ -2,8 +2,8 @@
 
 case $# in
     0)
-        read -p "user: " user
-        read -p "repo: " repo
+        read -p "user: " USER
+        read -p "repo: " REPO
         ;;
     1)
         BOTH=$1
