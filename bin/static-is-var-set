@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Parameter Expansion
+# https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02
+
+# -n: Length of string is non-zero
+# -z: Length of string is zero
+
+is_var_set() {
+    echo -n '-n ${VAR}   '
+    [[ -n ${VAR} ]] && echo V || echo F
+
+    echo -n '-n ${VAR-x} '
+    [[ -n ${VAR-x} ]] && echo V || echo F
+
+    echo -n '-n ${VAR+x} '
+    [[ -n ${VAR+x} ]] && echo V || echo F
+
+    echo -n '-z ${VAR}   '
+    [[ -z ${VAR} ]] && echo V || echo F
+
+    echo -n '-z ${VAR-x} '
+    [[ -z ${VAR-x} ]] && echo V || echo F
+
+    echo -n '-z ${VAR+x} '
+    [[ -z ${VAR+x} ]] && echo V || echo F
+
+    echo
+}
+
+echo 'VAR=set' && VAR=set
+is_var_set
+
+echo 'VAR=""' && VAR=""
+is_var_set
+
+echo 'unset VAR' && unset VAR
+is_var_set
