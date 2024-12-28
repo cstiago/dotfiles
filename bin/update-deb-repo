@@ -1,5 +1,18 @@
 #!/bin/bash
 
+download() {
+    xargs -n 2 bash -c 'sudo curl -L -o "$1/$2.deb" "$3"' bash $DEBREPODIR
+}
+
+if [[ $# -gt 1 ]]; then
+    BIN=$(get-file-full-path $0)
+
+    echo "Usage: $BIN [package]"
+    echo "e.g. $BIN discord"
+
+    exit 1
+fi
+
 if [[ ! -f $DEBREPOLIST ]]; then
     echo "deb [trusted=yes] file:$DEBREPODIR ./" | sudo tee $DEBREPOLIST
 fi
@@ -7,9 +20,22 @@ fi
 sudo mkdir -p $DEBREPODIR
 cd $DEBREPODIR
 sudo ln -fs $DEBREPOTXT .
-sudo rm ./*.deb
+sudo rm ./*.deb 2> /dev/null
 
-sudo awk '{print $1, $2}' $DEBREPOTXT | xargs -n 2 bash -c 'sudo curl -L -o "$1/$2.deb" "$3"' bash $DEBREPODIR
+if [[ -n $1 ]]; then
+    PACKAGE=$1
+    FILTER=$(awk -v PACKAGE="$PACKAGE" '$1 == PACKAGE' $DEBREPOTXT)
+
+    if [[ -z $FILTER ]]; then
+        echo "Error: package not in $DEBREPOTXT"
+
+        exit 2
+    fi
+
+    echo $FILTER | download
+else
+    cat $DEBREPOTXT | download
+fi
 
 sudo dpkg-scanpackages . /dev/null | sudo gzip -9c | sudo tee $DEBREPODIR/Packages.gz > /dev/null
 
