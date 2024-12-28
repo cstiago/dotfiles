@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ $# -lt 1 ]]; then
+    BIN=$(get-file-full-path $0)
+
+    echo "Usage: $BIN <package>"
+    echo "e.g. $BIN discord"
+
+    exit 1
+fi
+
+PACKAGE=$1
+
+awk -v PACKAGE="$PACKAGE" '$1 == PACKAGE {print $2}' $DEBREPOTXT
