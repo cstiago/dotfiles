@@ -2,37 +2,34 @@
 
 # Parameter Expansion
 # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_06_02
+# Null meaning empty
 
 # -n: Length of string is non-zero
 # -z: Length of string is zero
 
+# ${VAR-x}: if set, use default value - if unset, use alternative value
+# ${VAR+x}: if set, use alternative value - if unset, use empty
+
 is_var_set() {
-    echo -n '-n ${VAR}   '
-    [[ -n ${VAR} ]] && echo V || echo F
+    CONDITIONS=('-n ${VAR}' '-n ${VAR-x}' '-n ${VAR+x}' '-z ${VAR}' '-z ${VAR-x}' '-z ${VAR+x}')
 
-    echo -n '-n ${VAR-x} '
-    [[ -n ${VAR-x} ]] && echo V || echo F
-
-    echo -n '-n ${VAR+x} '
-    [[ -n ${VAR+x} ]] && echo V || echo F
-
-    echo -n '-z ${VAR}   '
-    [[ -z ${VAR} ]] && echo V || echo F
-
-    echo -n '-z ${VAR-x} '
-    [[ -z ${VAR-x} ]] && echo V || echo F
-
-    echo -n '-z ${VAR+x} '
-    [[ -z ${VAR+x} ]] && echo V || echo F
+    for CONDITION in "${CONDITIONS[@]}"; do
+        echo -n "$CONDITION "
+        eval "[[ $CONDITION ]]" && echo V || echo F
+    done
 
     echo
 }
 
-echo 'VAR=set' && VAR=set
-is_var_set
+format() {
+    awk '{printf "%-11s %s\n", $1 " " $2, $3}'
+}
+
+echo 'VAR="set"' && VAR="set"
+is_var_set | format
 
 echo 'VAR=""' && VAR=""
-is_var_set
+is_var_set | format
 
 echo 'unset VAR' && unset VAR
-is_var_set
+is_var_set | format
