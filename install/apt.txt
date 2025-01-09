@@ -13,3 +13,4 @@ tmux
 vlc
 time
 info
+sysfsutils
