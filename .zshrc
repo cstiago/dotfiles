@@ -134,6 +134,9 @@ export DEBREPOLIST=/etc/apt/sources.list.d/$DEBREPO.list
 # cstiago/proc
 export PROCDIR=$HOME/proc
 
+# .local
+append_to_env PATH $HOME/.local/bin
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -147,5 +150,8 @@ TEXINFO=/usr/local/texlive/2024/texmf-dist/doc/info
 append_to_env PATH $TEXBIN
 append_to_env MANPATH $TEXMAN
 append_to_env INFOPATH $TEXINFO
+
+# Snap
+append_to_env PATH /snap/bin
 
 return 0
