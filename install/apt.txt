@@ -1,14 +1,18 @@
 zsh
+wget
 curl
 vim
-neovim # execute as nvim
+neovim
+emacs
+code
 git
-build-essential # building tools (gcc, make etc.)
-gdb # gnu debugger
-python3
+neofetch
+cowsay
+cmatrix
 docker
 tmux
+python3
+pip
 vlc
-time
-info
-sysfsutils
+firefox
+google-chrome-stable
