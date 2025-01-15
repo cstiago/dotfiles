@@ -1,7 +1,5 @@
 #!/bin/bash
 
-xdg-user-dirs-update
-
 echo 'XDG_DESKTOP_DIR="$HOME/desktop"
 XDG_DOWNLOAD_DIR="$HOME/downloads"
 XDG_TEMPLATES_DIR="$HOME/templates"
@@ -19,3 +17,5 @@ mv $HOME/Documents $HOME/documents
 mv $HOME/Music $HOME/music
 mv $HOME/Pictures $HOME/pictures
 mv $HOME/Videos $HOME/videos
+
+xdg-user-dirs-update

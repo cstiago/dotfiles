@@ -12,7 +12,6 @@ cmatrix
 docker
 tmux
 python3
-pip
 vlc
 firefox
 google-chrome-stable
