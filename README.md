@@ -1,10 +1,10 @@
 # dotfiles
 
-Configs playground
+Configs playground mostly for Debian-based distros.
 
 ## .zshrc
 
-Main dotfile for general environment configs
+Main dotfile for general environment configs.
 
 General vars
 - DFDIR: Dotfiles directory
@@ -19,28 +19,28 @@ Deb repo vars
 
 ## .zshutils
 
-Dotfile with funcions used in .zshrc
+Dotfile with funcions used in .zshrc.
 
 ## .p10k.zsh
 
-ZSH Powerlevel10k configuration file
+ZSH Powerlevel10k configuration file.
 
-## bootstrap\.sh
+## setup\.sh
 
-Bash script for a brand new system installation
+Bash script for a brand new system installation.
 
 ## ./bin
 
-Multipurpose Bash scripts
+Multipurpose Bash scripts.
 
 ## ./install
 
-Installation text files with official and 3rd party packages
+Installation text files with official and 3rd party packages.
 
 ## ./termux
 
-Termux dotfiles
+Termux dotfiles.
 
 ## ./.config/nvim
 
-Neovim configs dir
+Neovim configs dir.
