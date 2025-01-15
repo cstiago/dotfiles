@@ -29,6 +29,10 @@ ZSH Powerlevel10k configuration file.
 
 Bash script for a brand new system installation.
 
+```bash
+bash -c "$(curl -sL https://raw.githubusercontent.com/cstiago/dotfiles/main/setup.sh)"
+```
+
 ## ./bin
 
 Multipurpose Bash scripts.
