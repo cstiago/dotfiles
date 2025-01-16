@@ -20,3 +20,12 @@ append_to_env() {
         fi
     fi
 }
+
+# Clipboard management
+copy() {
+    xclip -selection clipboard
+}
+
+paste() {
+    xclipt -selection clipboard -o
+}
