@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ $# -gt 1 ]]; then
+    BIN=$(get-file-full-path $0)
+
+    echo "Usage: $BIN [package]"
+    echo "e.g. $BIN discord"
+
+    exit 1
+fi
+
+apt-cache policy $1
+flatpak search $1
