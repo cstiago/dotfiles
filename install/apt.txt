@@ -15,3 +15,11 @@ python3
 vlc
 firefox
 google-chrome-stable
+
+build-essential
+autoconf
+meson
+libpcap-dev
+libsdl2-dev
+libgtk-3-dev
+steam-devices
