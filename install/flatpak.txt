@@ -1,0 +1,4 @@
+discord
+steam
+retroarch
+mgba
