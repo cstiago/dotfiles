@@ -15,7 +15,7 @@ ssh-keygen -t ed25519 -C $(hostnamectl | grep Static | awk '{print $3}')
 sed 's/#.*//' install/apt.txt | xargs sudo apt -y install
 
 # Install packages from Flatpak
-sed 's/#.*//' install/flatpak.txt | xargs flatpak install
+sed 's/#.*//' install/flatpak.txt | xargs flatpak --or-update -y install 
 
 # Install fonts
 cat install/fonts.txt | xargs wget -P fonts
