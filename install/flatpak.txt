@@ -1,4 +1,4 @@
-discord
-steam
-retroarch
-mgba
+com.discordapp.Discord
+com.valvesoftware.Steam
+org.libretro.RetroArch
+io.mgba.mGBA
