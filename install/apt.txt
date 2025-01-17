@@ -11,12 +11,16 @@ cowsay
 cmatrix
 docker
 tmux
+npm
 python3
 vlc
 firefox
 google-chrome-stable
+virtualbox
+qbittorrent
 
 build-essential
+ffmpeg
 autoconf
 meson
 libpcap-dev
