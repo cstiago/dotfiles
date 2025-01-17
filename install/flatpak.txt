@@ -1,4 +1,7 @@
 com.discordapp.Discord
+com.spotify.Client
 com.valvesoftware.Steam
 org.libretro.RetroArch
+io.github.sameboy.SameBoy
 io.mgba.mGBA
+io.github.lime3ds.Lime3DS
