@@ -18,7 +18,6 @@ firefox
 google-chrome-stable
 virtualbox
 qbittorrent
-
 build-essential
 ffmpeg
 autoconf
