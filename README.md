@@ -33,18 +33,18 @@ Bash script for a brand new system installation.
 bash -c "$(curl -sL https://raw.githubusercontent.com/cstiago/dotfiles/main/setup.sh)"
 ```
 
-## ./bin
+## bin/
 
 Multipurpose Bash scripts.
 
-## ./install
+## inst/
 
 Installation text files with official and 3rd party packages.
 
-## ./termux
+## termux/
 
 Termux dotfiles.
 
-## ./.config/nvim
+## .config/nvim/
 
 Neovim configs dir.
