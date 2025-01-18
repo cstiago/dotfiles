@@ -1,28 +1,45 @@
+# cli
+bash
 zsh
 wget
 curl
 vim
 neovim
 emacs
-code
+tmux
+ffmpeg
+
+# build
 git
+docker
+build-essential
+autoconf
+meson
+npm
+python2.7
+python3
+python3-pip
+
+# misc
 neofetch
+fortune
 cowsay
 cmatrix
-docker
-tmux
-npm
-python3
+cbonsai
+cava
+
+# gui
 vlc
+code
 firefox
 google-chrome-stable
 virtualbox
 qbittorrent
-build-essential
-ffmpeg
-autoconf
-meson
+
+# lib
+plasma-workspace-wayland
 libpcap-dev
 libsdl2-dev
 libgtk-3-dev
 steam-devices
+scdaemon
