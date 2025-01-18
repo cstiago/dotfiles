@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ls
+
+for file in ./*.zip; do
+    [[ -f "$file" ]]; then
+        unzip "$file" && rm "$file"
+    fi
+done
+
+ls
