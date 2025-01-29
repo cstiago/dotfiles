@@ -3,43 +3,59 @@ bash
 zsh
 wget
 curl
+flatpak
 vim
 neovim
 emacs
 tmux
 ffmpeg
+xclip
+gocryptfs
+debconf-utils
+quota
 
-# build
+apt-transport-https
+ca-certificates
+software-properties-common
+
+# building
 git
-docker
+docker-ce
 build-essential
 autoconf
 meson
+perl
 npm
-python2.7
 python3
 python3-pip
 
 # misc
 neofetch
-fortune
+fortune-mod
 cowsay
 cmatrix
 cbonsai
 cava
 
-# gui
-vlc
-code
+# apps
 firefox
 google-chrome-stable
+code
+vlc
 virtualbox
 qbittorrent
 
-# lib
-plasma-workspace-wayland
+# libs
 libpcap-dev
 libsdl2-dev
 libgtk-3-dev
+
+# devices
 steam-devices
 scdaemon
+
+# plasma
+plasma-discover-backend-flatpak
+plasma-pa
+plasma-workspace-wayland
+
