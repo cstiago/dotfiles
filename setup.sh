@@ -22,7 +22,7 @@ sed 's/#.*//' inst/apt.txt | xargs -n 1 sudo apt -y install
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install packages from Flatpak
-sed 's/#.*//' inst/flatpak.txt | xargs -n 1 flatpak --or-update -y install 
+sed 's/#.*//' inst/flatpak.txt | xargs flatpak --or-update -y install 
 
 # Install fonts
 cat inst/fonts.txt | xargs wget -P fonts
