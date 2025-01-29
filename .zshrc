@@ -46,8 +46,8 @@ export DEBREPOTXT=$DFDIR/install/$DEBREPO.txt
 export DEBREPODIR=/usr/local/$DEBREPO
 export DEBREPOLIST=/etc/apt/sources.list.d/$DEBREPO.list
 
-# cstiago/proc
-export PROCDIR=$HOME/proc
+# cstiago/procs
+export PROCDIR=$HOME/procs
 
 # local
 append_to_env PATH /usr/local/bin
