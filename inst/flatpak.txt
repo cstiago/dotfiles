@@ -4,4 +4,5 @@ com.valvesoftware.Steam
 org.libretro.RetroArch
 io.github.sameboy.SameBoy
 io.mgba.mGBA
+org.desmume.DeSmuME
 io.github.lime3ds.Lime3DS
