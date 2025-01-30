@@ -59,3 +59,27 @@ plasma-discover-backend-flatpak
 plasma-pa
 plasma-workspace-wayland
 
+# locale
+hunspell-en-us
+hunspell-fr
+hunspell-pt-br
+hyphen-en-us
+hyphen-fr
+hyphen-pt-br
+language-pack-en
+language-pack-fr
+language-pack-pt
+libreoffice-help-en-us
+libreoffice-help-fr
+libreoffice-help-pt
+libreoffice-help-pt-br
+libreoffice-l10n-fr
+libreoffice-l10n-pt
+libreoffice-l10n-pt-br
+mythes-en-us
+mythes-fr
+mythes-pt-br
+wamerican
+wbrazilian
+wfrench
+wportuguese
