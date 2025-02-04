@@ -1,5 +1,5 @@
 # ===== I/O operations =====
-fortune | cowsay
+fortune
 
 # ===== Powerlevel10k Instant Prompt =====
 
@@ -36,15 +36,16 @@ export MANPATH=$(manpath -q)
 source $HOME/.zshutils
 
 export DFDIR=$HOME/dotfiles
-export BINDIR=$DFDIR/bin
-
-append_to_env PATH $BINDIR
-append_to_env PATH $DFDIR/install
 
 export DEBREPO=deb
-export DEBREPOTXT=$DFDIR/install/$DEBREPO.txt
+export DEBREPOTXT=$DFDIR/inst/$DEBREPO.txt
 export DEBREPODIR=/usr/local/$DEBREPO
 export DEBREPOLIST=/etc/apt/sources.list.d/$DEBREPO.list
+
+# cstiago/scripts
+export BINDIR=$HOME/scripts
+
+append_to_env PATH $BINDIR
 
 # cstiago/procs
 export PROCDIR=$HOME/procs
@@ -66,5 +67,10 @@ TEXINFO=/usr/local/texlive/2024/texmf-dist/doc/info
 append_to_env PATH $TEXBIN
 append_to_env MANPATH $TEXMAN
 append_to_env INFOPATH $TEXINFO
+
+# Metasploit Framework
+MFDIR=/opt/metasploit-framework/bin
+
+append_to_env PATH $MFDIR
 
 return 0
